@@ -4,23 +4,47 @@ main {
   font-family: 'HelveticaNeue-Light', 'HelveticaNeue', 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Fredericka the Great', cursive;
+  text-align: center;
 }
 
-.jumbotron {
+h2 {
+  margin: 45px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    margin: 30px 0;
+  }
+  h1 {
+    margin: 40px 0;
+  }
+}
+
+p {
+  font-size: 18px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+.intro-jumbotron {
   height: 100vh;
   -webkit-height: 100vh;
   -moz-height: 100vh;
   -ms-height: 100vh;
   -o-height: 100vh;
-  background: url(assets/images/background.png);
+  background: url(assets/images/background_fountain.png);
   background-size: cover;
   background-color: rgb(234, 245, 255)
 }
 
-.jumbotron h1 {
-  font-size: 7em;
+.intro-jumbotron h1 {
   text-align: center;
   animation: fadein 2s;
   -moz-animation: fadein 2s; /* Firefox */
@@ -29,7 +53,7 @@ h1, h2 {
 }
 
 @media only screen and (max-width: 600px) {
-  .jumbotron {
+  .intro-jumbotron {
     background-image: url("assets/images/me.png"), url("assets/images/machrie_portrait.jpg");
     background-position: bottom right, center;
     background-repeat: no-repeat;
@@ -46,7 +70,7 @@ h1, h2 {
     margin: 0;
   }
 
-  .jumbotron .landing-content {
+  .intro-jumbotron .landing-content {
     margin: auto;
     padding: 50% 0;
     background: rgba(206, 228, 234, 0.77);
@@ -55,9 +79,8 @@ h1, h2 {
     background: -moz-linear-gradient(rgba(78, 108, 111, 0), rgba(206, 228, 234, 0.85), rgba(78, 108, 111, 0));
   }
 
-  .jumbotron h1 {
+  .intro-jumbotron h1 {
     margin: 20% auto;
-    font-size: 3em;
   }
 }
 
@@ -105,7 +128,7 @@ h1, h2 {
 
 @media only screen and (max-width: 600px) {
   .me {
-    width: 80%;
+    display: none;
   }
 }
 
@@ -130,10 +153,9 @@ h1, h2 {
   transition-duration: 1s;
 }
 
-
 /* boring text and stuff */
 .intro {
-  height: 100vh;
+  height: 350px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -150,31 +172,45 @@ h1, h2 {
 }
 
 .intro p {
-  font-size: 1.3em;
 }
 .intro p.link {
   margin: 30px 0;
-  font-size: 1.5em;
 }
 
 .link h2 {
   color: #224665;
   text-decoration: none;
-  margin: 25px 0;
 }
 
 .link h2 a:hover {
   text-decoration: none;
   color: #455840;
 }
+@media only screen and (max-width: 600px) {
+  div.last-link {
+    margin-bottom: 60px;
+  }
+}
+.jumbotron.about {
+  background-color: #8db4d7;
+  margin: 0;
+}
 
 .row.about {
-  font-size: 1em;
   padding: 8%;
   padding-top: 30px;
   text-align: left;
-  background-color: #8db4d7;
 }
+
+@media only screen and (max-width: 600px) {
+  .about.jumbotron {
+    padding: 0;
+  }
+  .about.jumbotron p {
+    font-size: 16px;
+  }
+}
+
 div.machrie .col-xs-12 {
   padding: 0;
 }
@@ -183,13 +219,24 @@ div.machrie .col-xs-12 {
   width: 100%;
 }
 
-#machrie .machrie-text h2 {
-  margin-bottom: 30px;
-}
-
 #machrie .machrie-text {
   padding: 5%;
 }
+.machrie-text p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .machrie.jumbotron {
+    padding: 0;
+  }
+  #machrie.machrie-text {
+    color: pink;
+  }
+  .machrie-text p {
+  }
+}
+
 
 div.holyrood .col-xs-12 {
   padding: 0;
@@ -199,15 +246,11 @@ div.holyrood .col-xs-12 {
   width: 100%;
 }
 
-#holyrood .holyrood-text h2 {
-  margin-bottom: 30px;
-}
-
-
-#holyrood .holyrood-text p {
-  font-size: 1.2em;
-}
 #holyrood .holyrood-text {
   padding: 5%;
+}
 
+iframe.twitter-timeline {
+  margin: 0 auto !important;
+  width: 100% !important;
 }
