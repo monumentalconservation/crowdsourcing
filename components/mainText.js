@@ -25,7 +25,7 @@ class MainText extends Component {
     return (
       <section>
       <Grid>
-        <div className="intro">
+        <div className="intro fixed-height">
           <Row className="show-grid">
             <Col xs={12} md={12} id="welcome">
               <h1>Welcome to Monumental Conservation</h1>

@@ -1,7 +1,27 @@
+* {
+  background-color: #000000;
+  font-family: 'Ovo', serif;
+}
+
+div.holding {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f1f1f1;
+}
+img {
+  width: 100vw;
+}
+
+div.holding p {
+  margin-top: 60px;
+  font-size: 2em;
+}
+
 main {
   text-align: center;
-  /*font-family: 'EB Garamond', serif;*/
-  font-family: 'HelveticaNeue-Light', 'HelveticaNeue', 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3 {
@@ -35,11 +55,10 @@ p {
 
 .intro-jumbotron {
   height: 100vh;
-  -webkit-height: 100vh;
-  -moz-height: 100vh;
-  -ms-height: 100vh;
-  -o-height: 100vh;
-  background: url(assets/images/background_fountain.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(assets/images/background.png);
   background-size: cover;
   background-color: rgb(234, 245, 255)
 }
@@ -157,6 +176,9 @@ p {
 .intro {
   height: 100%;
 }
+.fixed-height {
+  height: 600px;
+}
 
 @media only screen and (max-width: 600px) {
   .intro, .about, .machrie, .holyrood {
@@ -246,11 +268,14 @@ div.holyrood .col-xs-12 {
   width: 100%;
 }
 
-#holyrood .holyrood-text {
-  padding: 5%;
+#holyrood .holyrood-text h2 {
+  margin-bottom: 30px;
 }
 
-iframe.twitter-timeline {
-  margin: 0 auto !important;
-  width: 100% !important;
+
+#holyrood .holyrood-text p {
+  font-size: 1em;
+}
+#holyrood .holyrood-text {
+  padding: 5%;
 }
